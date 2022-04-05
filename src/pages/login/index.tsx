@@ -56,7 +56,9 @@ const Login: React.FC = () => {
               onChange={formik.handleChange}
             />
             {formik.errors.name && (
-              <S.ContainerError>{formik.errors.name}</S.ContainerError>
+              <S.ContainerError id="qa-name-input-error">
+                {formik.errors.name}
+              </S.ContainerError>
             )}
           </S.ContainerInput>
           <S.ContainerCheckBox>
@@ -64,7 +66,9 @@ const Login: React.FC = () => {
               <Field type="checkbox" name="legalAge" id="qa-checkbox" />
               <S.TextInfo>Are you older than 18 years old?</S.TextInfo>
               {formik.errors.legalAge && (
-                <S.ContainerError>{formik.errors.legalAge}</S.ContainerError>
+                <S.ContainerError id="qa-checkbox-error">
+                  {formik.errors.legalAge}
+                </S.ContainerError>
               )}
             </div>
           </S.ContainerCheckBox>

@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import {
-  IoBarChart,
   IoCallOutline,
   IoLocationOutline,
   IoTrash,
+  IoAddCircleOutline,
 } from 'react-icons/io5';
+import { HiOutlineChartSquareBar } from 'react-icons/hi';
 import { background, color } from '../../../assets/css/color';
 import { typography } from '../../../assets/css/typography';
 
@@ -69,6 +70,36 @@ export const Chip = styled.div`
   text-transform: capitalize;
 `;
 
+export const ChipInputContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: auto;
+  height: 32px;
+  border-radius: 99px;
+  cursor: pointer;
+  background-color: ${background.login};
+  input {
+    border: 0;
+    outline: 0;
+  }
+`;
+
+export const ChipInput = styled.input`
+  border: 1px solid ${background.login};
+  background-color: ${background.login};
+  width: 60%;
+  cursor: pointer;
+  font-family: ${typography.type.primary};
+  font-weight: ${typography.weight.regular};
+  font-size: ${typography.size.s3}px;
+  ::placeholder {
+    color: ${color.black};
+    opacity: 1;
+  }
+`;
+
 export const IconTrashContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -77,29 +108,36 @@ export const IconTrashContainer = styled.div`
 `;
 
 export const IconTrash = styled(IoTrash)`
-  width: 18px;
+  width: 22px;
   height: 20px;
   color: ${color.gray};
   cursor: pointer;
 `;
 
-export const IconBarChart = styled(IoBarChart)`
-  width: 16px;
-  height: 16px;
+export const IconBarChart = styled(HiOutlineChartSquareBar)`
+  width: 24px;
+  height: 24px;
   margin: 8px;
   color: ${color.gray};
 `;
 
 export const IconPhone = styled(IoCallOutline)`
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   margin: 8px;
   color: ${color.gray};
 `;
 
 export const IconLocation = styled(IoLocationOutline)`
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+  color: ${color.gray};
+`;
+
+export const IconMore = styled(IoAddCircleOutline)`
+  width: 24px;
+  height: 24px;
   margin: 8px;
   color: ${color.gray};
 `;

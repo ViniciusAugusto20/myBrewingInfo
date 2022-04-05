@@ -63,7 +63,7 @@ const Home: React.FC = () => {
     <S.MainContent>
       <S.Header>
         <S.ContainerGoBack>
-          <S.IconBack onClick={backToLoginScreen} />
+          <S.IconBack id="qa-backButton" onClick={backToLoginScreen} />
           <S.TextInfo>Go back</S.TextInfo>
         </S.ContainerGoBack>
         <S.TextInfo>{auth?.name}</S.TextInfo>

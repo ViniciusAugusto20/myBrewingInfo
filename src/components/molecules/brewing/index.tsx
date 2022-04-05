@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BrewingProps } from '../../../models/brewing';
 
 import * as S from './style';
 
 const Brewing: React.FC<BrewingProps> = (brewing) => {
+  const [customInput, setCustomInput] = useState<string>('');
+
   return (
     <S.Container>
       <S.IconTrashContainer>
         <S.IconTrash
+          id={`qa-remove-button-${brewing.id}`}
           onClick={() => brewing.removerSelectedBrewing(brewing.id)}
         />
       </S.IconTrashContainer>
@@ -32,6 +35,14 @@ const Brewing: React.FC<BrewingProps> = (brewing) => {
           <S.IconPhone />
           {brewing.phone}
         </S.Chip>
+        <S.ChipInputContainer>
+          <S.IconMore />
+          <S.ChipInput
+            value={customInput}
+            placeholder="add more"
+            onChange={(event) => setCustomInput(event?.target.value)}
+          />
+        </S.ChipInputContainer>
       </S.ChipContainer>
     </S.Container>
   );
