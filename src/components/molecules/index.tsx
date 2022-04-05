@@ -1,3 +1,4 @@
 import ToastContainer from './toastContainer';
+import Brewing from './brewing';
 
-export { ToastContainer };
+export { ToastContainer, Brewing };

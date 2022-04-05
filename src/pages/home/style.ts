@@ -12,6 +12,23 @@ const customMedia = generateMedia({
 export const MainContent = styled.main`
   height: 100vh;
   background-color: ${background.app};
+  overflow-y: scroll;
+`;
+
+export const BrewingContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 38px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 100px;
+  ${customMedia.lessThan('desktop')`
+      grid-template-columns: repeat(2, auto);
+  `}
+  ${customMedia.lessThan('laptop')`
+      grid-template-columns: repeat(1, auto);
+  `}
 `;
 
 export const Header = styled.div`
@@ -60,4 +77,27 @@ export const TextInfo = styled.span`
   font-weight: ${typography.weight.regular};
   font-size: ${typography.size.l1}px;
   color: ${color.black};
+`;
+
+export const PaginationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  .MuiPaginationItem-page {
+    color: ${color.gray};
+  }
+  .MuiPaginationItem-page.Mui-selected {
+    background-color: ${background.login};
+    color: ${color.gray};
+    :hover {
+      background-color: ${background.login};
+    }
+  }
+  .MuiPaginationItem-page:hover {
+    background-color: ${background.login};
+    opacity: 1;
+    color: ${color.gray};
+  }
 `;

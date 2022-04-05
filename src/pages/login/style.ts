@@ -30,7 +30,7 @@ export const FormBox = styled.form`
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 20%;
+  top: 35%;
 `;
 
 export const ContainerInput = styled.div<InputProps>`
