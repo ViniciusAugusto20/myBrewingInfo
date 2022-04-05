@@ -2,7 +2,7 @@ import React, { useContext, useState, createContext } from 'react';
 import { UserProps } from '../models/user';
 
 type AuthProviderProps = {
-  setAuth: (auth: UserProps) => void;
+  setAuth: (auth: UserProps | undefined) => void;
   auth?: UserProps;
 };
 
