@@ -60,22 +60,6 @@ export const ContainerInput = styled.div<InputProps>`
   }
 `;
 
-export const ContainerCheckBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  input {
-    margin: 0px 8px 0px 0px;
-    :hover {
-      cursor: pointer;
-    }
-  }
-  span {
-    margin: 0px;
-  }
-`;
-
 export const ButtonSubmitContainer = styled.div`
   margin-top: 25px;
   display: flex;
@@ -116,6 +100,26 @@ export const ContainerError = styled.div`
   font-size: ${typography.size.s1}px;
 `;
 
+export const ContainerCheckBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  input {
+    margin: 0px 8px 0px 0px;
+    :hover {
+      cursor: pointer;
+    }
+  }
+  span {
+    margin: 0px;
+  }
+  ${ContainerError}:last-child {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const BeeContainer = styled.div`
   position: absolute;
   bottom: 0px;
@@ -124,5 +128,34 @@ export const BeeContainer = styled.div`
       height: 180px;
       width: 160px;
     `}
+  }
+  animation-name: movingBee;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  @keyframes movingBee {
+    0% {
+      left: 0px;
+      bottom: 0px;
+    }
+    20% {
+      right: 60px;
+      bottom: 60px;
+    }
+    40% {
+      left: 120px;
+      bottom: 120px;
+    }
+    60% {
+      right: 180px;
+      bottom: 180px;
+    }
+    80% {
+      left: 240px;
+      bottom: 240px;
+    }
+    100% {
+      left: 300px;
+      bottom: 300px;
+    }
   }
 `;

@@ -93,7 +93,7 @@ export const ChipInput = styled.input`
   cursor: pointer;
   font-family: ${typography.type.primary};
   font-weight: ${typography.weight.regular};
-  font-size: ${typography.size.s3}px;
+  font-size: ${typography.size.s2}px;
   ::placeholder {
     color: ${color.black};
     opacity: 1;
@@ -115,29 +115,29 @@ export const IconTrash = styled(IoTrash)`
 `;
 
 export const IconBarChart = styled(HiOutlineChartSquareBar)`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   margin: 8px;
   color: ${color.gray};
 `;
 
 export const IconPhone = styled(IoCallOutline)`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   margin: 8px;
   color: ${color.gray};
 `;
 
 export const IconLocation = styled(IoLocationOutline)`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 22px;
   margin: 8px;
   color: ${color.gray};
 `;
 
 export const IconMore = styled(IoAddCircleOutline)`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   margin: 8px;
   color: ${color.gray};
 `;

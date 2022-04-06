@@ -1,12 +1,12 @@
+import '@fontsource/work-sans';
+
 export const typography = {
   type: {
-    primary: 'Work Sans',
+    primary: '"Work Sans", sans-serif',
   },
   weight: {
     regular: '400',
-    semiBold: '600',
     bold: '700',
-    extrabold: '800',
   },
   size: {
     s0: '11',
