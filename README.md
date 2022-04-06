@@ -58,6 +58,6 @@ Each card has the functionality to remove it from the grid display (this removal
 
 The display of cards consists of 6 cards and it is possible to remove 5, if the user tries to remove all cards an error message will be shown and there will be no proceeding in this removal operation.
 
-A pagination was created so that the user can change the information displayed in the grids (as the api did not return a totalizer of breweries, the value of 42 pages was used as a model).
+A pagination was created so that the user can change the information displayed in the grids (as the api did not return a totalizer of breweries, the value of 42 pages was used as a model). This component was the only part created using Material-UI the since the lib provides this component having a good performance and simplicity in its implementation.
 
 

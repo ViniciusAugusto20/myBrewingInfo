@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { generateMedia } from 'styled-media-query';
-import { IoArrowBackCircleSharp } from 'react-icons/io5';
+import IcoArrowBack from '../../assets/icons/icon-arrowBack.svg';
 import { background, color } from '../../assets/css/color';
 import { sizes } from '../../assets/css/devices';
 import { typography } from '../../assets/css/typography';
@@ -63,13 +63,17 @@ export const ContainerGoBack = styled.div`
   text-align: right;
 `;
 
-export const IconBack = styled(IoArrowBackCircleSharp)`
+export const IconBack = styled.i`
+  mask: url(${IcoArrowBack});
+  mask-size: cover;
   width: 38px;
   height: 38px;
   margin: 16px 20px;
   color: ${color.gray};
   cursor: pointer;
   position: relative;
+  display: inline-block;
+  background-color: ${color.gray};
 `;
 
 export const TextInfo = styled.span`

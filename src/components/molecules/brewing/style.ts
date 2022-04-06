@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import {
-  IoCallOutline,
-  IoLocationOutline,
-  IoTrash,
-  IoAddCircleOutline,
-} from 'react-icons/io5';
-import { HiOutlineChartSquareBar } from 'react-icons/hi';
+import IcoTrash from '../../../assets/icons/icon-trash.svg';
+import IcoLocation from '../../../assets/icons/icon-location.svg';
+import IcoBars from '../../../assets/icons/icon-bars.svg';
+import IcoPhone from '../../../assets/icons/icon-phone.svg';
+import IcoAdd from '../../../assets/icons/icon-add.svg';
 import { background, color } from '../../../assets/css/color';
 import { typography } from '../../../assets/css/typography';
 
@@ -98,6 +96,11 @@ export const ChipInput = styled.input`
     color: ${color.black};
     opacity: 1;
   }
+  :focus {
+    background-color: ${color.white};
+    border: 1px solid ${color.lightGray};
+    border-radius: 4px;
+  }
 `;
 
 export const IconTrashContainer = styled.div`
@@ -107,37 +110,56 @@ export const IconTrashContainer = styled.div`
   align-items: center;
 `;
 
-export const IconTrash = styled(IoTrash)`
-  width: 22px;
-  height: 20px;
+export const IconTrash = styled.i`
+  mask: url(${IcoTrash});
+  mask-size: cover;
+  width: 14px;
+  height: 16px;
   color: ${color.gray};
   cursor: pointer;
+  display: inline-block;
+  background-color: ${color.gray};
 `;
 
-export const IconBarChart = styled(HiOutlineChartSquareBar)`
-  width: 20px;
-  height: 20px;
+export const IconBarChart = styled.i`
+  mask: url(${IcoBars});
+  mask-size: cover;
+  width: 16px;
+  height: 16px;
   margin: 8px;
   color: ${color.gray};
+  display: inline-block;
+  background-color: ${color.gray};
 `;
 
-export const IconPhone = styled(IoCallOutline)`
-  width: 20px;
-  height: 20px;
+export const IconPhone = styled.i`
+  mask: url(${IcoPhone});
+  mask-size: cover;
+  width: 18px;
+  height: 18px;
   margin: 8px;
   color: ${color.gray};
+  display: inline-block;
+  background-color: ${color.gray};
 `;
 
-export const IconLocation = styled(IoLocationOutline)`
+export const IconLocation = styled.i`
+  mask: url(${IcoLocation});
+  mask-size: cover;
   width: 20px;
   height: 22px;
-  margin: 8px;
+  margin: 6px;
   color: ${color.gray};
+  display: inline-block;
+  background-color: ${color.gray};
 `;
 
-export const IconMore = styled(IoAddCircleOutline)`
-  width: 20px;
-  height: 20px;
+export const IconMore = styled.i`
+  mask: url(${IcoAdd});
+  mask-size: cover;
+  width: 18px;
+  height: 18px;
   margin: 8px;
-  color: ${color.gray};
+  display: inline-block;
+  background-color: ${color.gray};
 `;
